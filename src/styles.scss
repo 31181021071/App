@@ -1,1 +1,180 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    background-image: url('/assets/img/background.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .content {
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .checkbox-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .checkbox-item img {
+    width: 400px; /* Điều chỉnh kích thước ảnh */
+    height: 300px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 5px;
+  }
+  
+  .checkbox-item input[type="checkbox"] {
+    margin-bottom: 5px;
+  }
+  
+  .checkbox-item label {
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .centered-div {
+    width: 100vw; /* Độ rộng bằng 100% viewport width */
+    padding: 20px; /* Thêm padding nếu cần */
+    text-align: center; /* Căn giữa nội dung trong div */
+  }
+
+  .navigate-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+    height: 100vh;
+  }
+
+h1 {
+    font-size: 100px; /* Điều chỉnh kích thước theo nhu cầu */
+    font-weight: bold; /* Tùy chọn: làm đậm chữ */
+    color: crimson;
+}
+
+h3 {
+    font-size:60px; /* Điều chỉnh kích thước theo nhu cầu */
+    font-weight: bold; /* Tùy chọn: làm đậm chữ */
+    color: crimson;
+}
+
+label {
+  font-size:30px; /* Điều chỉnh kích thước theo nhu cầu */
+  font-weight: bold; /* Tùy chọn: làm đậm chữ */
+}
+
+.red-button {
+    background-color: #ff4d4d; /* Màu đỏ tươi */
+    color: #ffffff; /* Màu chữ trắng */
+    font-size: 16px; /* Kích thước chữ */
+    font-weight: bold; /* Chữ đậm */
+    padding: 10px 20px; /* Khoảng cách bên trong nút */
+    border: none; /* Loại bỏ viền */
+    border-radius: 5px; /* Bo tròn các góc */
+    cursor: pointer; /* Con trỏ dạng nhấn */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Hiệu ứng khi hover */
+  }
+  
+  .red-button:hover {
+    background-color: #ff1a1a; /* Màu đỏ đậm hơn khi hover */
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+  }
+  
+  .red-button:active {
+    background-color: #e60000; /* Màu đỏ sẫm hơn khi nhấn */
+    transform: scale(0.95); /* Thu nhỏ nhẹ khi nhấn */
+  }
+
+
+  .white-button {
+    background-color: white; /* Nền trắng */
+    color: #ff4d4d; /* Màu chữ đỏ */
+    font-size: 16px; /* Kích thước chữ */
+    font-weight: bold; /* Chữ đậm */
+    padding: 10px 20px; /* Khoảng cách bên trong nút */
+    border: none; /* Loại bỏ viền */
+    border-radius: 5px; /* Bo tròn các góc */
+    cursor: pointer; /* Con trỏ dạng nhấn */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Hiệu ứng khi hover */
+    // transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng khi hover */
+  }
+  
+  .white-button:hover {
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+  }
+
+  .gif-container-cat-santa {
+    width: 100%; /* Đặt chiều rộng 100% của container */
+    max-width: 10vw; /* Đặt chiều rộng tối đa (có thể chỉnh lại) */
+    height: 30vh; /* Chiều cao tự động theo tỷ lệ */
+    display: flex; /* Căn giữa nội dung GIF */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ẩn cuộn nếu xảy ra */
+  }
+
+  @media (max-width: 600px) {
+    .gif-container-cat-santa {
+      max-width: 65vw; /* Điều chỉnh max-width cho điện thoại di động */
+      height: 40vh;
+    }
+  }
+
+  .gif-container-cat-love {
+    width: 100%; /* Đặt chiều rộng 100% của container */
+    max-width: 600px; /* Đặt chiều rộng tối đa (có thể chỉnh lại) */
+    height: 60vh; /* Chiều cao tự động theo tỷ lệ */
+    display: flex; /* Căn giữa nội dung GIF */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ẩn cuộn nếu xảy ra */
+  }
+
+  @media (max-width: 600px) {
+    .gif-container-cat-love {
+      max-width: 90vw; /* Điều chỉnh max-width cho điện thoại di động */
+      height: 80vh;
+    }
+  }
+  
+  .gif-iframe {
+    width: 100%; /* Chiếm toàn bộ chiều rộng container */
+    height: 100%; /* Tự động điều chỉnh chiều cao theo tỷ lệ */
+    border: none; /* Loại bỏ viền */
+  }
+
+  .container {
+    width: 80%;
+    height: auto; /* Đảm bảo container cha có chiều cao tự động */
+    min-height: 100px; /* Nếu cần, đặt chiều cao tối thiểu */
+  }
+
+  .notes-textarea {
+    width: 80%; /* Độ rộng textarea */
+    height: 60px; /* Chiều cao textarea */
+    margin: 20px auto; /* Căn giữa và thêm khoảng cách */
+    display: block; /* Hiển thị dạng block */
+    border: 1px solid #ccc; /* Đường viền */
+    border-radius: 5px; /* Góc bo tròn */
+    padding: 10px; /* Padding bên trong */
+    font-size: 16px; /* Cỡ chữ */
+    resize: none; /* Tắt tùy chọn thay đổi kích thước */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
+  }
+
+  
+
+
